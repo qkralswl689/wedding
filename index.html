@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="강동수 ♥ 박민희 결혼합니다.">
+<meta property="og:description" content="2026년 11월 21일 토요일 오후 2시 30분">
+<meta property="og:image" content="https://YOUR_ID.github.io/wedding/img/og.jpg">
+<meta property="og:url" content="https://YOUR_ID.github.io/wedding/">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}</style>
+<title>강동수 ♥ 박민희 청첩장</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* Layout: single centered 480px column, one long scroll like a printed card; photo leads, text stays quiet */
+  :root {
+    --ground: #ecebe8;      /* page behind the column on wide screens */
+    --paper: #fcfbf9;       /* column surface */
+    --ink: #3b3937;         /* body text */
+    --muted: #8d8984;       /* labels and weekday row */
+    --script: #fdeac1;      /* "our wedding day" over the photo */
+    --rose: #e79a9a;        /* the heart */
+    --mark: #b8b4af;        /* highlighted wedding day */
+    --hair: #e2dfda;        /* thin dividers */
+    --display: "Italiana", "Didot", "Bodoni 72", "Times New Roman", serif;
+    --body: "Gowun Batang", "Noto Serif KR", "Nanum Myeongjo", "Apple SD Gothic Neo", serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 15px;
+    line-height: 1.9;
+    padding-inline: 0;
+  }
+  .page {
+    max-width: 480px;
+    margin-inline: auto;
+    background: var(--paper);
+    overflow: hidden;
+  }
+  section { padding: 72px 24px; text-align: center; }
+  h2 {
+    margin: 0 0 28px;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    text-wrap: balance;
+  }
+  p { margin: 0; }
+  .heart { color: var(--rose); }
+
+  /* Main */
+  .hero { position: relative; }
+  .hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 600 / 1005;   /* tall full-screen crop, couple sits low so the lettering has the wall above */
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+  .hero .script {
+    position: absolute;
+    top: 8%;
+    left: 0; right: 0;
+    margin: 0;
+    text-align: center;
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: min(14vw, 67px);
+    line-height: 0.84;
+    letter-spacing: 0.05em;
+    color: var(--script);
+    -webkit-text-stroke: 0.6px var(--script);
+    text-shadow: 0 1px 10px rgba(150, 120, 60, 0.35);
+    pointer-events: none;
+  }
+  .hero .script .word { display: block; }
+  /* each letter is written left to right, one after another */
+  .hero .script .ch {
+    display: inline-block;
+    animation: write 0.45s ease-out both;
+    animation-delay: calc(0.35s + var(--i) * 0.16s);
+  }
+  @keyframes write {
+    from { opacity: 0; clip-path: inset(-25% 100% -25% -5%); }
+    to   { opacity: 1; clip-path: inset(-25% -5% -25% -5%); }
+  }
+  .hero-names {
+    padding: 36px 24px 0;
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 0.1em;
+  }
+  .hero-date {
+    margin-top: 6px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    font-variant-numeric: tabular-nums;
+  }
+  .hero-wrap { padding-bottom: 8px; }
+
+  /* Greeting */
+  .greeting p.msg { line-height: 2.1; }
+  .greeting p.msg span { display: block; }
+  .parents {
+    margin-top: 56px;
+    display: grid;
+    gap: 6px;
+    font-size: 15px;
+  }
+  .parents b { font-weight: 700; margin-left: 0.35em; }
+  .dot { margin-inline: 0.45em; color: var(--muted); }
+  .flower { color: var(--muted); font-size: 0.9em; margin-right: 0.1em; }
+
+  /* Ceremony */
+  .ceremony { border-top: 1px solid var(--hair); }
+  .when { font-variant-numeric: tabular-nums; }
+  .where { margin-top: 2px; }
+  .cal { margin: 44px auto 0; max-width: 340px; }
+  .cal .month {
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    margin-bottom: 18px;
+  }
+  .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  .cal-grid > * {
+    display: grid;
+    place-items: center;
+    height: 42px;
+    line-height: 1;
+  }
+  .cal-grid .dow { color: var(--muted); font-size: 14px; height: 36px; }
+  .cal-grid .day { font-size: 15px; }
+  .cal-grid .day.on {
+    background: var(--mark);
+    color: #fff;
+    border-radius: 50%;
+    width: 42px;
+    justify-self: center;
+  }
+
+  /* Gallery */
+  .gallery { border-top: 1px solid var(--hair); padding-inline: 0; }
+  .gallery h2 { padding-inline: 24px; }
+  .stage { position: relative; }
+  .track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    margin-inline: 24px;
+    outline-offset: 4px;
+  }
+  .track::-webkit-scrollbar { display: none; }
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    aspect-ratio: 5 / 7;
+    background: var(--hair);
+  }
+  .slide img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    width: 40px; height: 40px;
+    border: 0; border-radius: 50%;
+    background: rgba(252, 251, 249, 0.72);
+    color: var(--ink);
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    display: grid; place-items: center;
+  }
+  .arrow:focus-visible, .track:focus-visible { outline: 2px solid var(--ink); }
+  .arrow.prev { left: 32px; }
+  .arrow.next { right: 32px; }
+  .count {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    font-variant-numeric: tabular-nums;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .track { scroll-behavior: auto; }
+    .hero .script .ch { animation: none; }
+  }
+  @media (min-width: 520px) {
+    body { padding-block: 24px; }
+  }
+</style>
+
+</head>
+<body>
+<main class="page">
+
+  <div class="hero-wrap">
+    <div class="hero">
+      <img src="img/p2918.jpg" alt="강동수와 박민희의 웨딩 사진" width="637" height="961">
+      <p class="script" aria-hidden="true"><span class="word">our</span><span class="word">wedding</span><span class="word">day</span></p>
+    </div>
+    <p class="hero-names">강동수 <span class="heart">♥</span> 박민희</p>
+    <p class="hero-date">2026. 11. 21 SAT &nbsp;PM 2:30</p>
+  </div>
+
+  <section class="greeting" id="greeting">
+    <h2>저희 결혼합니다</h2>
+    <p class="msg">
+      <span>저희의 새로운 시작을</span>
+      <span>축하해주세요.</span>
+      <span>&nbsp;</span>
+      <span>축의는 정중히 사양하며,</span>
+      <span>축하와 응원의 마음은</span>
+      <span>듬뿍 받겠습니다.</span>
+    </p>
+    <div class="parents">
+      <p>강희순<span class="dot">·</span>구강조 의 아들 <b>강동수</b></p>
+      <p>박범준<span class="dot">·</span><span class="flower">❀</span>이미순 의 딸 <b>박민희</b></p>
+    </div>
+  </section>
+
+  <section class="ceremony" id="ceremony">
+    <h2>예식 안내</h2>
+    <p class="when">2026년 11월 21일 토요일 오후 2시 30분</p>
+    <p class="where">로얄파크컨벤션 1층 파크홀</p>
+
+    <div class="cal" role="table" aria-label="2026년 11월 달력">
+      <p class="month">11월</p>
+      <div class="cal-grid">
+        <span class="dow">일</span><span class="dow">월</span><span class="dow">화</span><span class="dow">수</span><span class="dow">목</span><span class="dow">금</span><span class="dow">토</span>
+        <span class="day">1</span><span class="day">2</span><span class="day">3</span><span class="day">4</span><span class="day">5</span><span class="day">6</span><span class="day">7</span>
+        <span class="day">8</span><span class="day">9</span><span class="day">10</span><span class="day">11</span><span class="day">12</span><span class="day">13</span><span class="day">14</span>
+        <span class="day">15</span><span class="day">16</span><span class="day">17</span><span class="day">18</span><span class="day">19</span><span class="day">20</span><span class="day on" aria-label="21일 예식일">21</span>
+        <span class="day">22</span><span class="day">23</span><span class="day">24</span><span class="day">25</span><span class="day">26</span><span class="day">27</span><span class="day">28</span>
+        <span class="day">29</span><span class="day">30</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <h2>갤러리</h2>
+    <div class="stage">
+      <div class="track" id="track" tabindex="0" aria-label="사진 갤러리, 좌우로 넘겨 보세요">
+        <div class="slide"><img src="img/p2918.jpg" alt="웨딩 사진 1" loading="eager"></div>
+        <div class="slide"><img src="img/p2919.jpg" alt="웨딩 사진 2" loading="lazy"></div>
+        <div class="slide"><img src="img/p2920.jpg" alt="웨딩 사진 3" loading="lazy"></div>
+        <div class="slide"><img src="img/p2921.jpg" alt="웨딩 사진 4" loading="lazy"></div>
+        <div class="slide"><img src="img/p2924.jpg" alt="웨딩 사진 5" loading="lazy"></div>
+        <div class="slide"><img src="img/p2923.jpg" alt="웨딩 사진 6" loading="lazy"></div>
+        <div class="slide"><img src="img/p2922.jpg" alt="웨딩 사진 7" loading="lazy"></div>
+        <div class="slide"><img src="img/p2927.jpg" alt="웨딩 사진 8" loading="lazy"></div>
+        <div class="slide"><img src="img/p2926.jpg" alt="웨딩 사진 9" loading="lazy"></div>
+        <div class="slide"><img src="img/p2925.jpg" alt="웨딩 사진 10" loading="lazy"></div>
+        <div class="slide"><img src="img/p2930.jpg" alt="웨딩 사진 11" loading="lazy"></div>
+        <div class="slide"><img src="img/p2929.jpg" alt="웨딩 사진 12" loading="lazy"></div>
+        <div class="slide"><img src="img/p2928.jpg" alt="웨딩 사진 13" loading="lazy"></div>
+      </div>
+      <button class="arrow prev" id="prev" type="button" aria-label="이전 사진">‹</button>
+      <button class="arrow next" id="next" type="button" aria-label="다음 사진">›</button>
+    </div>
+    <p class="count" id="count" aria-live="polite">1 / 13</p>
+  </section>
+
+</main>
+
+<script>
+  (function () {
+    var track = document.getElementById('track');
+    var slides = Array.prototype.slice.call(track.children);
+    var count = document.getElementById('count');
+    var total = slides.length;
+    var current = 0;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // split the main-photo lettering into single letters so each can be written in turn
+    var words = document.querySelectorAll('.hero .script .word');
+    var n = 0;
+    Array.prototype.forEach.call(words, function (w) {
+      var text = w.textContent;
+      w.textContent = '';
+      text.split('').forEach(function (c) {
+        var s = document.createElement('span');
+        s.className = 'ch';
+        s.style.setProperty('--i', n++);
+        s.textContent = c;
+        w.appendChild(s);
+      });
+    });
+
+    function paint(i) {
+      current = i;
+      count.textContent = (i + 1) + ' / ' + total;
+    }
+
+    function go(i) {
+      i = Math.max(0, Math.min(total - 1, i));
+      track.scrollTo({ left: i * track.clientWidth, behavior: reduce ? 'auto' : 'smooth' });
+      paint(i);
+    }
+
+    var ticking = false;
+    track.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        ticking = false;
+        var i = Math.round(track.scrollLeft / track.clientWidth);
+        if (i !== current) paint(i);
+      });
+    });
+
+    document.getElementById('prev').addEventListener('click', function () { go(current - 1); });
+    document.getElementById('next').addEventListener('click', function () { go(current + 1); });
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(current - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(current + 1); }
+    });
+
+    paint(0);
+  })();
+</script>
+
+</body>
+</html>
