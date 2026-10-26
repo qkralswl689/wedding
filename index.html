@@ -204,6 +204,36 @@
     letter-spacing: 0.12em;
     font-variant-numeric: tabular-nums;
   }
+  /* Directions */
+  .directions { border-top: 1px solid var(--hair); }
+  .directions .place { font-size: 17px; letter-spacing: 0.04em; }
+  .directions .place small { display: block; color: var(--muted); font-size: 14px; letter-spacing: 0.02em; }
+  .map {
+    margin-top: 28px;
+    aspect-ratio: 4 / 3;
+    background: var(--hair);
+  }
+  .map iframe { display: block; width: 100%; height: 100%; border: 0; }
+  .map-links {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .map-links a {
+    display: block;
+    padding: 12px 4px;
+    border: 1px solid var(--hair);
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.2;
+    background: var(--paper);
+  }
+  .map-links a:focus-visible { outline: 2px solid var(--ink); }
+  .route { margin-top: 36px; text-align: left; display: grid; gap: 22px; }
+  .route h3 { margin: 0 0 4px; font-size: 15px; font-weight: 700; letter-spacing: 0.04em; }
+  .route p { color: var(--ink); line-height: 1.8; }
   @media (prefers-reduced-motion: reduce) {
     .track { scroll-behavior: auto; }
     .hero .script .ch { animation: none; }
@@ -265,6 +295,32 @@
       <button class="arrow next" id="next" type="button" aria-label="다음 사진">›</button>
     </div>
     <p class="count" id="count" aria-live="polite">1 / 13</p>
+  </section>
+
+  <section class="directions" id="directions">
+    <h2>오시는 길</h2>
+    <p class="place">로얄파크컨벤션<small>1층 파크홀<br>서울 용산구 용산동1가 8</small></p>
+
+    <div class="map">
+      <iframe title="로얄파크컨벤션 위치 지도" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=126.9715%2C37.5335%2C126.9820%2C37.5400&amp;layer=mapnik&amp;marker=37.5368%2C126.9768"></iframe>
+    </div>
+    <div class="map-links">
+      <a href="tmap://search?name=%EB%A1%9C%EC%96%84%ED%8C%8C%ED%81%AC%EC%BB%A8%EB%B2%A4%EC%85%98">티맵</a>
+      <a href="https://map.kakao.com/link/search/%EB%A1%9C%EC%96%84%ED%8C%8C%ED%81%AC%EC%BB%A8%EB%B2%A4%EC%85%98" target="_blank" rel="noopener">카카오맵</a>
+      <a href="https://map.naver.com/p/search/%EB%A1%9C%EC%96%84%ED%8C%8C%ED%81%AC%EC%BB%A8%EB%B2%A4%EC%85%98" target="_blank" rel="noopener">네이버지도</a>
+    </div>
+
+    <div class="route">
+      <div>
+        <h3>지하철</h3>
+        <p>삼각지역 12번 출구 (도보 3분)<br>남영역 1번 출구 (도보 7분)</p>
+      </div>
+      <div>
+        <h3>자동차</h3>
+        <p>전쟁기념관 주차장 2시간 무료 이용 가능<br>서울시 용산구 이태원로 29</p>
+      </div>
+    </div>
   </section>
 
 </main>
