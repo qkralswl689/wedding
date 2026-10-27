@@ -301,10 +301,7 @@
     <h2>오시는 길</h2>
     <p class="place">로얄파크컨벤션<small>1층 파크홀<br>서울 용산구 용산동1가 8</small></p>
 
-    <div class="map">
-      <iframe title="로얄파크컨벤션 위치 지도" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=126.9715%2C37.5335%2C126.9820%2C37.5400&amp;layer=mapnik&amp;marker=37.5368%2C126.9768"></iframe>
-    </div>
+    <div class="map" id="map" role="img" aria-label="로얄파크컨벤션 위치 지도"></div>
     <div class="map-links">
       <a href="tmap://search?name=%EB%A1%9C%EC%96%84%ED%8C%8C%ED%81%AC%EC%BB%A8%EB%B2%A4%EC%85%98">티맵</a>
       <a href="https://map.kakao.com/link/search/%EB%A1%9C%EC%96%84%ED%8C%8C%ED%81%AC%EC%BB%A8%EB%B2%A4%EC%85%98" target="_blank" rel="noopener">카카오맵</a>
@@ -325,6 +322,29 @@
 
 </main>
 
+<script>
+  // if the Naver key is rejected, the map box shows a plain message and the app buttons below still work
+  window.navermap_authFailure = function () {
+    var m = document.getElementById('map');
+    if (m) { m.style.display = 'grid'; m.style.placeItems = 'center'; m.textContent = '아래 지도 앱 버튼으로 확인해 주세요.'; }
+  };
+</script>
+<script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=ytdzgswwyq"></script>
+<script>
+  (function () {
+    var el = document.getElementById('map');
+    if (!el || !window.naver || !naver.maps) return;
+    var pos = new naver.maps.LatLng(37.5370, 126.9751);   // 로얄파크컨벤션 (전쟁기념관 서쪽)
+    var map = new naver.maps.Map(el, {
+      center: pos,
+      zoom: 17,
+      scaleControl: true,
+      mapDataControl: false,
+      logoControlOptions: { position: naver.maps.Position.BOTTOM_LEFT }
+    });
+    new naver.maps.Marker({ position: pos, map: map, title: '로얄파크컨벤션' });
+  })();
+</script>
 <script>
   (function () {
     var track = document.getElementById('track');
